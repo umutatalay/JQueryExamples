@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <title>Umut Atalay</title>
+        <script src="jquery-3.5.1.min.js"></script>
+    </head>
+    <body>
+        
+        <table style="border-style: solid;">
+            <tr>
+                <td><strong>Name</strong></td>
+                <td><strong>Job</strong></td>
+            </tr>
+            <tr>
+                <td id="namearea">Umut Atalay</td>
+                <td class="jobCE">computer engineer</td>
+            </tr>
+            <tr>
+                <td id="namearea">Fernando Muslera</td>
+                <td class="jobF">footballer</td>
+            </tr>
+            <tr>
+                <td id="namearea">Yunus Emre Çelik</td>
+                <td class="jobCE">computer engineer</td>
+            </tr>
+            <tr>
+                <td id="namearea">Berkay Gürbüz</td>
+                <td class="jobCE">computer engineer</td>
+            </tr>
+        </table>
+      
+        <br>
+        <br>
+        <button id="btncompeng">Select to computer engineer</button>
+        <button id="btnF">Select to footballer</button>
+        <br>
+        <br>
+        <button id="NameUmut">Whose name is Umut</button>
+       
+
+        <script>
+           $(function(){
+               $("#btncompeng").click(function(){
+                   $(".jobCE").css("color","red");
+               })
+
+               $("#btnF").click(function(){
+                   $(".jobF").css("color","red")
+
+               })
+
+               $("#NameUmut").click(function(){
+                   $("#namearea:contains(Umut)").css("color","red")
+               })
+
+           })
+        </script>
+    </body>
+</html>

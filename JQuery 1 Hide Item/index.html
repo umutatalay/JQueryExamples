@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>Umut Atalay</title>
+        <script src="jquery-3.5.1.min.js"></script>
+    </head>
+    <body>
+        <p>Item 1 click me</p>
+        <p>Item 2 click me</p>
+        <p>Item 3 click me</p>
+        <p>Item 4 click me</p>
+        <p>Item 5 click me</p>
+
+        <script>
+            $(function () {
+                $("p").click(function () {
+                    $(this).hide(); // this only one item hide, if you were write p, all item gonna hide
+                })
+            })
+        </script>
+    </body>
+</html>
