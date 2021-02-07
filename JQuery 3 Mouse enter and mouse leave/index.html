@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>Umut Atalay</title>
+        <script src="jquery-3.5.1.min.js"></script>
+    </head>
+    <body>
+        <div id="mydiv" style="background-color: black;">
+            <h1 style="color: white;">HOVER</h1>
+        </div>
+
+        <script>
+            $(function(){
+                $("#mydiv").mouseenter(function(){
+                    $("#mydiv").css("background-color","red");
+                })
+                $("#mydiv").mouseleave(function(){
+                    $("#mydiv").css("background-color","black")
+                })
+
+            })
+        </script>
+    </body>
+</html>
