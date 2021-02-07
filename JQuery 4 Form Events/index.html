@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title>Umut Atalay</title>
+        <script src="jquery-3.5.1.min.js"></script>
+    </head>
+    <body>
+       <div id="mydiv" style="background-color: aqua;">:)</div>
+       <form id="frm">
+           Name: <input id="nameinput" type="text" value="Umut">
+           Job: <input id="jobinput" type="text">
+           <input id="btn" type="submit" value="Submit"> 
+       </form>
+       <button id="btn2"> form->Select </button>
+
+        <script>
+           $(function(){
+               $("#frm").submit(function(){
+                   alert("OK.");
+               });
+               $("#nameinput").focus(function(){
+                   $("#mydiv").css("background-color","red");
+
+               });
+               $("#nameinput").blur(function(){
+                   $("#mydiv").css("background-color","yellow");
+               });
+               $("#nameinput").select(function(){
+                  alert("Text selected.");
+               });
+               $("#btn2").click(function(){
+                $("#frm").trigger("submit");
+               });
+
+
+           });
+           
+        </script>
+    </body>
+</html>

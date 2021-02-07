@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <title>Umut Atalay</title>
+        <script src="jquery-3.5.1.min.js"></script>
+    </head>
+    <body>
+        <div id="mydiv" style="background-color: blue;">
+        <p id="p1"> Text 1 </p>
+        <p id="p2"> Text 2 </p>
+        <p id="p3"> Text 3 </p>
+        <p id="p4"> Text 4 </p>
+        <p id="p5"> Text 5 </p>
+        </div>
+        <input id="tb1" type="text">
+        <button id="btnAddLast"> add to last</button>
+        <button id="btnAddPrepend"> add to prepend</button>
+        <button id="btnAddAfter"> add to after</button>
+        <button id="btnRemove"> Remove to div</button>
+        <button onclick="AddItem()" id="btnOnClick"> btnOnClick</button>
+
+
+        <script>
+            function AddItem(){
+                var p1 = "<p> P 1 </p>";
+                var p2 = $("<p></p>").text(" P 2");
+                var p3 = document.createElement("p").innerHTML = " P 3";
+
+
+                $("#mydiv").append(p1,p2,p3);
+            }
+
+
+
+            $(function(){
+                $("#btnAddLast").click(function(){
+                   $("#mydiv").append($("#tb1").val());
+                });
+
+                $("#btnAddPrepend").click(function(){
+                   $("#mydiv").prepend($("#tb1").val());
+                });
+
+                $("#btnAddAfter").click(function(){
+                   $("#mydiv").after($("#tb1").val());
+                });
+
+                $("#btnRemove").click(function(){
+                   $("#mydiv").remove(); // Empty içerisinde bulunan itemleri siler remove tamamını siler.
+                });
+
+            });
+        </script>
+    </body>
+</html>
