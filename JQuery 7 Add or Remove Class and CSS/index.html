@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <title>Umut Atalay</title>
+        <script src="jquery-3.5.1.min.js"></script>
+
+        <style>
+            .bgred{
+                background-color: red;
+            }
+            .bgblue{
+                background-color: blue;
+            }
+            .colorwhite{
+                color: white;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="mydiv">
+            <p id="p1"> Text 1 </p>
+            <p id="p2" class="bgblue"> Text 2 </p>
+            <p id="p3"> Text 3 </p>
+            <p id="p4"> Text 4 </p>
+        </div>
+        <button id="btn"> Add class</button>
+
+        <script>
+            $(function(){
+                
+                $("#btn").click(function(){
+                    $("#p1").addClass("bgred");
+                    $("#p2").removeClass("bgblue");
+                    $("#p3").toggleClass("bgred");
+                    alert($("#p1").css("color"));
+                    $("#p4").css({"font-size":"50","color":"orange"});
+
+
+                });
+            });
+        </script>
+    </body>
+</html>
